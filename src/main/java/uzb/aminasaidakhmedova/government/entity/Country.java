@@ -6,36 +6,38 @@ public class Country {
 
     private static Country country;
     private String name;
+    private String capital;
     private ArrayList<State> states;
 
     //пэттерн синглтон
-    private Country(String name) {
+    private Country(String name, String capital) {
         this.name = name;
+        this.capital = capital;
         this.states = new ArrayList<>();
     }
 
-    public static Country getCountry(String name) {
+    public static Country getCountry(String name, String capital) {
         if (country == null) {
-            country = new Country(name);
+            country = new Country(name, capital);
         }
         return country;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getName() {
         return name;
     }
 
+    public String getCapital() {
+        return capital;
+    }
+
     //добавить штат
-    public void addState (State state) {
+    public void addState(State state) {
         states.add(state);
     }
 
     @Override
-    public String toString () {
-        return "Country " + name + " includes " + states;
+    public String toString() {
+        return "Country " + name + " with capital " + capital + " includes " + states;
     }
 }

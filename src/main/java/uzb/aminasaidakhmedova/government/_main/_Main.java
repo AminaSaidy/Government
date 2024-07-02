@@ -7,7 +7,7 @@ import uzb.aminasaidakhmedova.government.entity.Street;
 
 public class _Main {
     public static void main(String[] args) {
-        Country country = Country.getCountry("Greatland");
+        Country country = Country.getCountry("Greatland", "Greatcapital");
 
         State state1 = new State("New Rolly");
         State state2 = new State("Yorkes");
