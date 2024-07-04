@@ -45,8 +45,8 @@ public class Population {
         int averageAge = 0;
         for (Citizen citizen : citizens) {
             averageAge += citizen.getAge();
-            averageAge /= citizens.size();
         }
+        averageAge /= citizens.size();
         return averageAge;
     }
 

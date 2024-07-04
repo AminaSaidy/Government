@@ -36,13 +36,17 @@ public class Country {
         states.add(state);
     }
 
+    public List<State> getStates() {
+        return states;
+    }
+
     public int getAmountStates() {
         return states.size();
     }
 
     public int getTotalArea() {
         int totalArea = 0;
-        for(State state : states) {
+        for (State state : states) {
             totalArea += state.getArea();
         }
         return totalArea;

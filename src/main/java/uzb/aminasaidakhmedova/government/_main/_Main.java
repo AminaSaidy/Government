@@ -9,18 +9,19 @@ public class _Main {
         Scanner scanner = new Scanner(System.in);
         Country country = Country.getCountry("Greatland", "Greatcapital");
         Population population = new Population();
-        State state1 = new State("New Rolly", 1250);
-        State state2 = new State("Yorkes", 4000);
-        City city1 = new City("London");
-        City city2 = new City("Tashkent");
-        Street street1 = new Street("MyStreet");
-        Street street2 = new Street("YourStreet");
 
+        State state1 = new State("New Rolly", 1250, "RollyCenter");
+        City city1 = new City("London");
+        Street street1 = new Street("MyStreet");
         city1.addStreet(street1);
-        city2.addStreet(street2);
         state1.addCity(city1);
-        state2.addCity(city2);
         country.addState(state1);
+
+        State state2 = new State("Yorkes", 4000, "YorkCenter");
+        City city2 = new City("Tashkent");
+        Street street2 = new Street("YourStreet");
+        city2.addStreet(street2);
+        state2.addCity(city2);
         country.addState(state2);
 
         for (int i = 0; i < 5; i++) {
@@ -50,6 +51,9 @@ public class _Main {
                     System.out.println("Total area = " + country.getTotalArea());
                     break;
                 case 4:
+                    for (State state : country.getStates()) {
+                        System.out.println("State center: " + state.getStateCenter());
+                    }
                     break;
                 case 5:
                     System.out.println("Average age = " + population.getAverageAge());
