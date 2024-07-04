@@ -41,17 +41,18 @@ public class _Main {
             int choice = scanner.nextInt();
             switch (choice) {
                 case 1:
-                    System.out.println(country.getCapital());
+                    System.out.println("The capital is " + country.getCapital());
                     break;
                 case 2:
-                    System.out.println(country.getAmountStates());
+                    System.out.println("Amount of states = " + country.getAmountStates());
                     break;
                 case 3:
-                    System.out.println(country.getTotalArea());
+                    System.out.println("Total area = " + country.getTotalArea());
                     break;
                 case 4:
                     break;
                 case 5:
+                    System.out.println("Average age = " + population.getAverageAge());
                     break;
                 case 6:
                     System.out.println("Enter the length of the first names that you are looking for: ");

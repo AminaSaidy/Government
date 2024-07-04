@@ -38,6 +38,18 @@ public class Population {
         return result;
     }
 
+    public int getAverageAge() {
+        if (citizens.size() == 0) {
+            return 0;
+        }
+        int averageAge = 0;
+        for (Citizen citizen : citizens) {
+            averageAge += citizen.getAge();
+            averageAge /= citizens.size();
+        }
+        return averageAge;
+    }
+
     @Override
     public String toString() {
         return citizens.toString();
