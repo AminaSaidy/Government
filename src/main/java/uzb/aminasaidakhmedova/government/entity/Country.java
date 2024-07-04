@@ -1,12 +1,13 @@
 package uzb.aminasaidakhmedova.government.entity;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Country {
     private static Country country;
     private String name;
     private String capital;
-    private ArrayList<State> states;
+    private List<State> states;
 
     //пэттерн синглтон
     private Country(String name, String capital) {

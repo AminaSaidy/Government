@@ -5,7 +5,7 @@ import uzb.aminasaidakhmedova.government.entity.*;
 public class _Main {
     public static void main(String[] args) {
         Country country = Country.getCountry("Greatland", "Greatcapital");
-        Citizen citizen = new Citizen(country);
+        Population population = new Population ();
         State state1 = new State("New Rolly");
         State state2 = new State("Yorkes");
         City city1 = new City("London");
@@ -20,7 +20,12 @@ public class _Main {
         country.addState(state1);
         country.addState(state2);
 
+        for (int i = 0; i<5; i++) {
+            Citizen citizen = new Citizen (country);
+            population.addCitizens(citizen);
+        }
+
         System.out.println(country);
-        System.out.println(citizen);
+        System.out.println(population);
     }
 }

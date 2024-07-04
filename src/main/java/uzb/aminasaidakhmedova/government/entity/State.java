@@ -1,10 +1,11 @@
 package uzb.aminasaidakhmedova.government.entity;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class State {
     private String name;
-    private ArrayList<City> cities;
+    private List<City> cities;
 
     public State(String name) {
         this.name = name;
