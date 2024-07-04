@@ -36,6 +36,10 @@ public class Country {
         states.add(state);
     }
 
+    public int getAmountStates() {
+        return states.size();
+    }
+
     @Override
     public String toString() {
         return "Country " + name + " with capital " + capital + " " + states;

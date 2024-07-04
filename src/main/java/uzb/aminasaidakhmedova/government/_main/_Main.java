@@ -41,8 +41,10 @@ public class _Main {
             int choice = scanner.nextInt();
             switch (choice) {
                 case 1:
+                    System.out.println(country.getCapital());
                     break;
                 case 2:
+                    System.out.println(country.getAmountStates());
                     break;
                 case 3:
                     break;
