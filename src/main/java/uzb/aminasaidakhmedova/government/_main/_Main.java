@@ -5,7 +5,7 @@ import uzb.aminasaidakhmedova.government.entity.*;
 public class _Main {
     public static void main(String[] args) {
         Country country = Country.getCountry("Greatland", "Greatcapital");
-        Citizen citizen = new Citizen("jack", "jackson", 12, country);
+        Citizen citizen = new Citizen (15, country);
 
         State state1 = new State("New Rolly");
         State state2 = new State("Yorkes");

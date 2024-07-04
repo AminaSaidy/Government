@@ -1,5 +1,7 @@
 package uzb.aminasaidakhmedova.government.entity;
 
+import java.util.Random;
+
 public class Citizen {
 
     private static int newId = 1;
@@ -9,10 +11,10 @@ public class Citizen {
     private int age;
     private Country country;
 
-    public Citizen (String firstName, String lastName, int age, Country country) {
+    public Citizen(int age, Country country) {
         this.id = newId++;
-        this.firstName = firstName;
-        this.lastName = lastName;
+        this.firstName = generateRandomName(5);
+        this.lastName = generateRandomName(7);
         this.age = age;
         this.country = country;
     }
@@ -49,8 +51,18 @@ public class Citizen {
         return country;
     }
 
+    private static String generateRandomName(int length) {
+        String possibleChars = "abcdefghijklmnopqrstuvwxyz";
+        Random random = new Random();
+        StringBuilder strBuild = new StringBuilder(length);
+        for (int i = 0; i < length; i++) {
+            strBuild.append(possibleChars.charAt(random.nextInt(possibleChars.length())));
+        }
+        return strBuild.toString();
+    }
+
     @Override
-    public String toString () {
+    public String toString() {
         return "Citizen " + firstName + " " + lastName + ", ID: " + id + ", age: " + age + ", from " + country;
     }
 }
