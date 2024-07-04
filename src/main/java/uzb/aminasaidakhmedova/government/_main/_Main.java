@@ -9,8 +9,8 @@ public class _Main {
         Scanner scanner = new Scanner(System.in);
         Country country = Country.getCountry("Greatland", "Greatcapital");
         Population population = new Population();
-        State state1 = new State("New Rolly");
-        State state2 = new State("Yorkes");
+        State state1 = new State("New Rolly", 1250);
+        State state2 = new State("Yorkes", 4000);
         City city1 = new City("London");
         City city2 = new City("Tashkent");
         Street street1 = new Street("MyStreet");
@@ -47,6 +47,7 @@ public class _Main {
                     System.out.println(country.getAmountStates());
                     break;
                 case 3:
+                    System.out.println(country.getTotalArea());
                     break;
                 case 4:
                     break;

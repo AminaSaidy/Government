@@ -40,6 +40,14 @@ public class Country {
         return states.size();
     }
 
+    public int getTotalArea() {
+        int totalArea = 0;
+        for(State state : states) {
+            totalArea += state.getArea();
+        }
+        return totalArea;
+    }
+
     @Override
     public String toString() {
         return "Country " + name + " with capital " + capital + " " + states;

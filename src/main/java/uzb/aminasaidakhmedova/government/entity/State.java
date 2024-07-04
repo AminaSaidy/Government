@@ -5,10 +5,12 @@ import java.util.List;
 
 public class State {
     private String name;
+    private int area;
     private List<City> cities;
 
-    public State(String name) {
+    public State(String name, int area) {
         this.name = name;
+        this.area = area;
         this.cities = new ArrayList<>();
     }
 
@@ -18,6 +20,10 @@ public class State {
 
     public String getName() {
         return name;
+    }
+
+    public int getArea() {
+        return area;
     }
 
     //добавить город в штат
