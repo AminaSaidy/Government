@@ -1,13 +1,11 @@
 package uzb.aminasaidakhmedova.government._main;
 
-import uzb.aminasaidakhmedova.government.entity.City;
-import uzb.aminasaidakhmedova.government.entity.Country;
-import uzb.aminasaidakhmedova.government.entity.State;
-import uzb.aminasaidakhmedova.government.entity.Street;
+import uzb.aminasaidakhmedova.government.entity.*;
 
 public class _Main {
     public static void main(String[] args) {
         Country country = Country.getCountry("Greatland", "Greatcapital");
+        Citizen citizen = new Citizen("jack", "jackson", 12, country);
 
         State state1 = new State("New Rolly");
         State state2 = new State("Yorkes");
@@ -26,5 +24,6 @@ public class _Main {
         country.addState(state2);
 
         System.out.println(country);
+        System.out.println(citizen);
     }
 }

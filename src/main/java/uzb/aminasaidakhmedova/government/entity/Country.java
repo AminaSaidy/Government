@@ -38,6 +38,6 @@ public class Country {
 
     @Override
     public String toString() {
-        return "Country " + name + " with capital " + capital + " includes " + states;
+        return "Country " + name + " with capital " + capital + " " + states;
     }
 }

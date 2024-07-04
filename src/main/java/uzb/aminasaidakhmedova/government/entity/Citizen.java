@@ -49,4 +49,8 @@ public class Citizen {
         return country;
     }
 
+    @Override
+    public String toString () {
+        return "Citizen " + firstName + " " + lastName + ", ID: " + id + ", age: " + age + ", from " + country;
+    }
 }
