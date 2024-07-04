@@ -54,8 +54,14 @@ public class _Main {
                 case 5:
                     break;
                 case 6:
+                    System.out.println("Enter the length of the first names that you are looking for: ");
+                    int firstNameLength = scanner.nextInt();
+                    System.out.println(population.getCitizenByNameLength(firstNameLength));
                     break;
                 case 7:
+                    System.out.println("Enter the first character of the first names that you are looking for: ");
+                    char firstCharOfName = scanner.next().charAt(0);
+                    System.out.println(population.getCitizenByFirstChar(firstCharOfName));
                     break;
                 default:
                     System.out.println("Wrong input. Try again.");
