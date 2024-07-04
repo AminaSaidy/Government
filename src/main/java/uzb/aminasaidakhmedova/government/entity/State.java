@@ -28,5 +28,4 @@ public class State {
     public String toString() {
         return "State " + name + " that has " + cities;
     }
-
 }

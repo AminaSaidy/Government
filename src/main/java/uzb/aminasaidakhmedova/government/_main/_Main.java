@@ -5,14 +5,11 @@ import uzb.aminasaidakhmedova.government.entity.*;
 public class _Main {
     public static void main(String[] args) {
         Country country = Country.getCountry("Greatland", "Greatcapital");
-        Citizen citizen = new Citizen (15, country);
-
+        Citizen citizen = new Citizen(country);
         State state1 = new State("New Rolly");
         State state2 = new State("Yorkes");
-
-        City city1 = new City ("London");
-        City city2 = new City ("Tashkent");
-
+        City city1 = new City("London");
+        City city2 = new City("Tashkent");
         Street street1 = new Street("MyStreet");
         Street street2 = new Street("YourStreet");
 

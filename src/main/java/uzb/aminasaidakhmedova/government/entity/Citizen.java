@@ -3,19 +3,18 @@ package uzb.aminasaidakhmedova.government.entity;
 import java.util.Random;
 
 public class Citizen {
-
-    private static int newId = 1;
+    private static int newId = 1000;
     private final int id;
     private String firstName;
     private String lastName;
     private int age;
     private Country country;
 
-    public Citizen(int age, Country country) {
+    public Citizen(Country country) {
         this.id = newId++;
-        this.firstName = generateRandomName(5);
-        this.lastName = generateRandomName(7);
-        this.age = age;
+        this.firstName = generateRandomName(5 + new Random().nextInt(5));
+        this.lastName = generateRandomName(5 + new Random().nextInt(5));
+        this.age = 16 + new Random().nextInt(64);
         this.country = country;
     }
 

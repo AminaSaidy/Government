@@ -28,5 +28,4 @@ public class City{
     public String toString () {
         return "City " + name + " with " + streets;
     }
-
 }

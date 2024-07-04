@@ -19,5 +19,4 @@ public class Street {
     public String toString() {
         return "Street " + name;
     }
-
 }

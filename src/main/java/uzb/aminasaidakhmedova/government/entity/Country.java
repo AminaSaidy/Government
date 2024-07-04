@@ -3,7 +3,6 @@ package uzb.aminasaidakhmedova.government.entity;
 import java.util.ArrayList;
 
 public class Country {
-
     private static Country country;
     private String name;
     private String capital;
